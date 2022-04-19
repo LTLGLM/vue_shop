@@ -24,7 +24,7 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "babel-plugin-component": "^1.1.1",
-    "element-plus": "^2.1.8",
+    "element-plus": "^2.1.9",
     "element-ui": "^2.15.6",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
