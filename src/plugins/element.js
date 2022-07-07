@@ -42,6 +42,7 @@ import {
 
 import {
     ArrowRight,
+    CaretRight
 } from '@element-plus/icons-vue'
 
 // 注册成全局组件
@@ -75,11 +76,12 @@ export default (app) => {
     app.use(ElOption)
     app.component('location', Location)
     app.component('iconMenu', IconMenu)
-    app.component('arrowRight', ArrowRight)
+    app.component('arrowright', ArrowRight)
     app.component('search', Search)
     app.component('edit', Edit)
     app.component('delete', Delete)
     app.component('setting', Setting)
+    app.component('caretright', CaretRight)
     app.config.globalProperties.$message = ElMessage
     app.config.globalProperties.$confirm = ElMessageBox.confirm
 }
