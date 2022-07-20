@@ -30,9 +30,8 @@ import {
     ElTree,
     ElSelect,
     ElOption,
-    ElCascader,
-    ElAlert,
-    ElTabs
+    ElCascader，
+    ElAlert
 } from 'element-plus'
 import {
     Location,
@@ -81,7 +80,6 @@ export default (app) => {
     app.use(ElOption)
     app.use(ElCascader)
     app.use(ElAlert)
-    app.use(ElTabs)
     app.component(Location.name, Location)
     app.component(Menu.name, Menu)
     app.component(ArrowRight.name, ArrowRight)
