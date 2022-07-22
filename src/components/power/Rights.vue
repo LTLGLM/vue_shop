@@ -29,13 +29,16 @@
 export default {
   data() {
     return {
+      // 权限列表
       rightsList: [],
     }
   },
   created() {
+    // 获取所有的权限
     this.getRightsList()
   },
   methods: {
+    // 获取权限列表
     async getRightsList() {
       const { data: res } = await this.$http.get('rights/list')
       if (res.meta.status !== 200) {

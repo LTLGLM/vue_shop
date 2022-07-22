@@ -111,7 +111,7 @@
             <!-- 展开行 -->
             <el-table-column type="expand">
               <template v-slot="scope">
-                <!-- 循环绚烂Tag标签 -->
+                <!-- 循环渲染Tag标签 -->
                 <el-tag
                   :key="i"
                   v-for="(item, i) in scope.row.attr_vals"

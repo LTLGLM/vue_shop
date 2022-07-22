@@ -27,6 +27,7 @@
       >
         <!-- <el-table-column type="index" label="#" /> -->
         <el-table-column prop="cat_name" label="分类名称" />
+        <!-- 是否有效 -->
         <el-table-column prop="cat_deleted" label="是否有效">
           <template v-slot="scope">
             <el-icon
@@ -37,6 +38,7 @@
             <el-icon v-else style="color: red"><CircleCloseFilled /></el-icon>
           </template>
         </el-table-column>
+        <!-- 排序 -->
         <el-table-column prop="cat_level" label="排序">
           <template v-slot="scope">
             <el-tag size="mini" v-if="scope.row.cat_level === 0">一级</el-tag>
@@ -49,6 +51,7 @@
             <el-tag type="warning" size="mini" v-else>三级</el-tag>
           </template>
         </el-table-column>
+        <!-- 操作 -->
         <el-table-column label="操作" width="190px">
           <template v-slot="scope">
             <el-button

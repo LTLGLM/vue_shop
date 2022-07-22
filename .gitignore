@@ -2,6 +2,7 @@
 node_modules
 /dist
 /vue_api_server
+/.history
 
 
 # local env files
