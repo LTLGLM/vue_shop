@@ -90,7 +90,6 @@
     <!-- 添加分类的对话框 -->
     <el-dialog
       v-model="addCateDialogVisble"
-      v-if="addCateDialogVisble"
       title="添加分类"
       width="50%"
       @close="addCateDialogClosed"
@@ -114,6 +113,7 @@
             :props="cascaderProps"
             @change="parentCateChanged"
             clearable
+            :popper-append-to-body="false"
           ></el-cascader>
         </el-form-item>
       </el-form>

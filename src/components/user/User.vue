@@ -54,13 +54,15 @@
               type="primary"
               size="mini"
               @click="showEditDialog(scope.row.id)"
-            ><edit /></el-button>
+              ><edit
+            /></el-button>
             <!-- 删除按钮 -->
             <el-button
               type="danger"
               size="mini"
               @click="removeUserById(scope.row.id)"
-            ><el-icon><Delete /></el-icon></el-button>
+              ><el-icon><Delete /></el-icon
+            ></el-button>
             <!-- 分配角色按钮 -->
             <el-tooltip
               effect="dark"
@@ -68,11 +70,9 @@
               placement="top"
               :enterable="false"
             >
-              <el-button
-                type="warning"
-                size="mini"
-                @click="setRole(scope.row)"
-              ><el-icon><Setting /></el-icon></el-button>
+              <el-button type="warning" size="mini" @click="setRole(scope.row)"
+                ><el-icon><Setting /></el-icon
+              ></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -163,7 +163,6 @@
     <!-- 分配角色的对话框 -->
     <el-dialog
       @close="setRoleDialogClosed"
-      v-if="setRoleDialogVisible"
       v-model="setRoleDialogVisible"
       title="分配角色"
       width="50%"
@@ -173,7 +172,11 @@
         <p>当前的角色：{{ userInfo.role_name }}</p>
         <p>
           分配新角色：
-          <el-select v-model="selectedRoleId" placeholder="请选择">
+          <el-select
+            v-model="selectedRoleId"
+            placeholder="请选择"
+            :popper-append-to-body="false"
+          >
             <el-option
               v-for="item in rolesList"
               :key="item.id"
@@ -474,11 +477,11 @@ export default {
       // console.log(this.userInfo)
     },
     // 取消事件
-    cancelRoleInfo(){
+    cancelRoleInfo() {
       this.setRoleDialogVisible = false
       this.selectedRoleId = ''
       this.userInfo = {}
-    }
+    },
   },
 }
 </script>
@@ -486,4 +489,5 @@ export default {
 svg {
   width: 13.99px;
   height: 13.99px;
-}</style>
+}
+</style>

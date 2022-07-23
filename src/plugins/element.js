@@ -37,7 +37,9 @@ import {
     ElTabPane,
     ElCheckboxGroup,
     ElCheckbox,
-    ElUpload
+    ElUpload,
+    ElTimeline,
+    ElTimelineItem
 } from 'element-plus'
 import {
     Location,
@@ -53,6 +55,8 @@ import {
     ArrowRight,
     CaretRight,
     Menu,
+    EditPen,
+    LocationFilled
 } from '@element-plus/icons-vue'
 
 // 注册成全局组件
@@ -92,6 +96,8 @@ export default (app) => {
     app.use(ElCheckboxGroup)
     app.use(ElCheckbox)
     app.use(ElUpload)
+    app.use(ElTimeline)
+    app.use(ElTimelineItem)
     app.component(Location.name, Location)
     app.component(Menu.name, Menu)
     app.component(ArrowRight.name, ArrowRight)
@@ -103,6 +109,8 @@ export default (app) => {
     app.component(CaretRight.name, CaretRight)
     app.component(CircleCheckFilled.name, CircleCheckFilled)
     app.component(CircleCloseFilled.name, CircleCloseFilled)
+    app.component(EditPen.name, EditPen)
+    app.component(LocationFilled.name, LocationFilled)
     app.config.globalProperties.$message = ElMessage
     app.config.globalProperties.$confirm = ElMessageBox.confirm
 }
