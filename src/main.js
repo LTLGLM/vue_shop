@@ -7,6 +7,7 @@ import './assets/fonts/iconfont.css'
 // 导入全局样式表
 import './assets/css/global.css'
 import axios from 'axios'
+import * as echarts from 'echarts'
 
 // vue3不支持
 // // 导入富文本编辑器
@@ -29,7 +30,7 @@ const app = createApp(App)
 installElementPlus(app)
     // 将axios挂载到Vue实例上
 app.config.globalProperties.$http = axios
-
+app.config.globalProperties.$echarts = echarts
 app.config.globalProperties.$filters = {
         dateFormat(originCal) {
             const dt = new Date(originCal)
